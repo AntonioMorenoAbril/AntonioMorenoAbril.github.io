@@ -23,4 +23,5 @@ L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
     zIndex: 2
 }).addTo(map);
 
-// master 
+// Layer
+L.geoJson(My_Interest_Zones).addTo(map);
