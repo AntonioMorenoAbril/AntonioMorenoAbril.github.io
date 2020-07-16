@@ -4,13 +4,21 @@ var map = L.map('mapa', {
     zoom: 12
 });
 
-// Crea la variable capa de teselas de OpenCycleMap_3 y la añade al elemento de mapa
-var layer_OpenCycleMap_3 = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=8f3fd4826f1641e9a2cead3ef443e05d', {
+// Capa OpenCycleMap_3 
+L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=8f3fd4826f1641e9a2cead3ef443e05d', {
     attribution: '&copy; OpenCycleMap_3',
-    opacity: 0.504,
+    opacity: 0.5,
     minZoom: 12,
     maxZoom: 28,
     minNativeZoom: 0,
     maxNativeZoom: 18,
-});
-layer_OpenCycleMap_3.addTo(map);
+}).addTo(map);
+
+// Ortofoto del PNOA
+L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
+    layers: 'OI.OrthoimageCoverage', //nombre de la capa del servicio WMS (ver documento getCapabilities)
+    format: 'image/jpeg',
+    attribution: '&copy; Instituto Geográfico Nacional de España',
+    opacity: 0.3,
+    zIndex: 2
+}).addTo(map);
