@@ -22,3 +22,5 @@ L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
     opacity: 0.3,
     zIndex: 2
 }).addTo(map);
+
+// master 
