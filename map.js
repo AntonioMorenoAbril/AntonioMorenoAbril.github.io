@@ -70,3 +70,9 @@ L.control.layers(baseMaps, overlayMaps,{
 	position: 'topright', // 'topleft', 'bottomleft', 'bottomright'
 	collapsed: false // true
 }).addTo(map);
+
+// Escala
+L.control.scale({
+    imperial: false
+  }
+  ).addTo(map);
