@@ -28,13 +28,18 @@ var PNOA = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
 
 // CAPAS SUPERPUESTAS
 
-// Funcion popup 
+// Funcion popup con imagen 
+
 function popupInfo(feature, layer) { 
 	if (feature.properties && feature.properties.ID) 
 	{ 
-		layer.bindPopup( "<strong>" + feature.properties.ID + "</strong><br/>" + feature.properties.Tipo); 
-	} 
+        layer.bindPopup(
+            "ID: " + feature.properties.ID + "<br/>" + "Tipo: " + feature.properties.Tipo + "<br/>" + "Subtipo: " + feature.properties.Subtipo + "<br>" + "Nombre: " + feature.properties.Nombre + "<br>" + "IMG1: "    
+        )
+    } 
 }
+//img.src = "./images/(32)_OMIMG_20200708_083836_(582).jpg"
+
 
 // Funcion estilo poligono
 function stylePolygon(feature) {
