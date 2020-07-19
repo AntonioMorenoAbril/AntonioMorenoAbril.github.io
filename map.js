@@ -23,5 +23,16 @@ L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
     zIndex: 2
 }).addTo(map);
 
+
+// Funcion Popup
+function popupInfo(feature, layer) { 
+	if (feature.properties && feature.properties.ID) 
+	{ 
+		layer.bindPopup( "<strong>" + feature.properties.ID + "</strong><br/>" + feature.properties.Tipo); 
+	} 
+}
+
 // Layer
-L.geoJson(My_Interest_Zones).addTo(map);
+L.geoJson(My_Interest_Zones, {
+    onEachFeature: popupInfo
+}).addTo(map);
