@@ -11,7 +11,7 @@ Proyecto encuadrado dentro de las prácticas curriculares del máster online TGI
 * 
 
 ### Datos del autor:
-Antonio Jesús Moreno Abril
+Antonio Jesús Moreno Abril  
 antoniomorenoabril@gmail.com
 
 ### Demo:
