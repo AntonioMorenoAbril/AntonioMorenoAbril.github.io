@@ -11,8 +11,8 @@ Proyecto encuadrado dentro de las prácticas curriculares del máster online TGI
 * 
 
 ### Datos del autor:
-Antonio Jesús Moreno Abril  
-antoniomorenoabril@gmail.com
+Nombre: Antonio Jesús Moreno Abril  
+Correo: antoniomorenoabril@gmail.com
 
 ### Demo:
 https://github.com/AntonioMorenoAbril/VisorBenamahoma.git
