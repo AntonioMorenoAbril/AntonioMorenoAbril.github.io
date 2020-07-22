@@ -38,7 +38,7 @@ function popupInfo(feature, layer) {
         )
     } 
 }
-//img.src = "./images/(32)_OMIMG_20200708_083836_(582).jpg"
+//img.src = "./images/map/(32)_OMIMG_20200708_083836_(582).jpg"
 
 
 // Funcion estilo poligono
