@@ -59,19 +59,6 @@ function popupInfo(feature, layer) {
 
     }
 }
-/*
-"<div class = 'ventana'> ID: " + feature.properties.ID + 
-"<br/>" + "Tipo: " + feature.properties.Tipo + 
-"<br/>" + "Subtipo: " + feature.properties.Subtipo + 
-"<br>" + "Nombre: " + feature.properties.Nombre + 
-
-"<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" + 
-"<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
-*/
-
-//var popupContent = "<div class = 'ventana'> ID: " + feature.properties.ID + "<br/>" + "Tipo: " + feature.properties.Tipo + "<br/>" + "Subtipo: " + feature.properties.Subtipo + "<br>" + "Nombre: " + feature.properties.Nombre + "<br>" + "<img src='./images/map/.jpg' alt='Flowers in Chania' width='460' height='345'></div>"
-
-
 
 
 // Funcion estilo poligono
