@@ -1,8 +1,13 @@
 // Crea una variable que contendrá el elemento de mapa y le da unos ajustes iniciales
 var map = L.map('mapa', {
-    center: [36.766, -5.425],
-    zoom: 12
+    center: [36.76, -5.46],
+    zoom: 16
 });
+
+// Variable que almacena My_Interest_Zones attributos:
+
+
+
 
 // CAPAS BASE
 
@@ -30,27 +35,55 @@ var PNOA = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
 
 // Funcion popup con imagen 
 
-function popupInfo(feature, layer) { 
-	if (feature.properties && feature.properties.ID) 
-	{ 
-        layer.bindPopup(
-            "ID: " + feature.properties.ID + "<br/>" + "Tipo: " + feature.properties.Tipo + "<br/>" + "Subtipo: " + feature.properties.Subtipo + "<br>" + "Nombre: " + feature.properties.Nombre + "<br>" + "IMG1: "    
-        )
-    } 
+function multiplestringsvariable() {
+    const id = ID
+    const tipo = Tipo
+    const subtipe = Subtipo
+    const name = Nombre
 }
-//img.src = "./images/map/(32)_OMIMG_20200708_083836_(582).jpg"
+
+function popupInfo(feature, layer) {
+    if (feature.properties && feature.properties.ID) {
+
+        var popupContent =
+
+            "<div class = 'ventana'> ID: " + feature.properties.ID +
+            "<br/>" + "Tipo: " + feature.properties.Tipo +
+            "<br/>" + "Subtipo: " + feature.properties.Subtipo +
+            "<br>" + "Nombre: " + feature.properties.Nombre +
+            "<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" +
+            "<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
+
+        console.log(popupContent)
+        layer.bindPopup(popupContent)
+
+    }
+}
+/*
+"<div class = 'ventana'> ID: " + feature.properties.ID + 
+"<br/>" + "Tipo: " + feature.properties.Tipo + 
+"<br/>" + "Subtipo: " + feature.properties.Subtipo + 
+"<br>" + "Nombre: " + feature.properties.Nombre + 
+
+"<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" + 
+"<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
+*/
+
+//var popupContent = "<div class = 'ventana'> ID: " + feature.properties.ID + "<br/>" + "Tipo: " + feature.properties.Tipo + "<br/>" + "Subtipo: " + feature.properties.Subtipo + "<br>" + "Nombre: " + feature.properties.Nombre + "<br>" + "<img src='./images/map/.jpg' alt='Flowers in Chania' width='460' height='345'></div>"
+
+
 
 
 // Funcion estilo poligono
 function stylePolygon(feature) {
     return {
-      weight: 1.3, // grosor de línea
-      color: 'yellow', // color de línea
-      opacity: 0.5, // tansparencia de línea
-      fillColor: 'yellow', // color de relleno
-      fillOpacity: 0.5 // transparencia de relleno
+        weight: 1.3, // grosor de línea
+        color: 'yellow', // color de línea
+        opacity: 0.5, // tansparencia de línea
+        fillColor: 'yellow', // color de relleno
+        fillOpacity: 0.5 // transparencia de relleno
     };
-  };
+};
 
 
 // Layer
@@ -71,13 +104,12 @@ var overlayMaps = {
     "Zonas_Interes": My_Interest_Zones
 };
 
-L.control.layers(baseMaps, overlayMaps,{
-	position: 'topright', // 'topleft', 'bottomleft', 'bottomright'
-	collapsed: false // true
+L.control.layers(baseMaps, overlayMaps, {
+    position: 'topright', // 'topleft', 'bottomleft', 'bottomright'
+    collapsed: false // true
 }).addTo(map);
 
 // Escala
 L.control.scale({
     imperial: false
-  }
-  ).addTo(map);
+}).addTo(map);
