@@ -119,26 +119,7 @@ function PointToLayer (feature, latlng) {
         });
 };
 
-    // Popup Function Table
-function PopupInfo (feature, layer) {
-    if (feature.properties && feature.properties.ID) {
-    var PopupContent = 
-        "<div class = 'tabla'>" +
-            "<table>" +
-                "<thead>" +
-                "<tr>" +
-                    "<th>name" + feature.properties.ID + "</th>" +
-                    "<th>height</th>" +
-                    "<th>place</th>" +
-                "</tr>" +
-            "</table>" +
-        "</div>";
-    }
-    layer.bindPopup(PopupContent);
-}
-
-
-    /* Poup Function Leaflet Default
+ //Poup Function Leaflet Default
     function PopupInfo (feature, layer) {
         if (feature.properties && feature.properties.ID) {
         var PopupContent = 
@@ -147,13 +128,51 @@ function PopupInfo (feature, layer) {
                         "<br/>" + "Tipo: " + feature.properties.Tipo +
                         "<br/>" + "Subtipo: " + feature.properties.Subtipo +
                         "<br>" + "Nombre: " + feature.properties.Nombre +
-                        "<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" +
-                        "<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
+                        "<br>" + "IMG: " + 
+                            "<div class='row'>" +
+                                "<div class='column'>" +
+                                    "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza' style='width:100%'>" +
+                                "</div>" +
+                            "<div class='row'>" +
+                                "<div class='column'>" +
+                                    "<img src='./images/map/2.jpg' alt='Snow' style='width:100%'>" +
+                            "</div>" +
+                        "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>" +
+                        "<br>" + "Pdf Content:" + "<br>" + "<button class='btn'><i class='fa fa-download'></i> Download</button>"
     }
         layer.bindPopup(PopupContent);
     }
-    */
+    
 
+    /* Popup Function Table
+function PopupInfo (feature, layer) {
+    if (feature.properties && feature.properties.ID) {
+    var PopupContent = 
+        "<div class = 'tabla'>" +
+            "<table>" +
+                "<thead>" +
+                "<tr>" +
+                    "<th>ID</th>" +
+                    "<th>Tipo</th>" +
+                    "<th>Subtipo</th>" +
+                    "<th>Nombre</th>" +
+                    "<th>Descripción</th>" +
+                    "<th>Link</th>" +
+                "</tr>" +
+                "<tr>" +
+                    "<td> " + feature.properties.ID + "</td>" +
+                    "<td>" + feature.properties.Tipo + "</td>" +
+                    "<td>" + feature.properties.Subtipo + "</td>" +
+                    "<td>" + feature.properties.Nombre + "</td>" +
+                    "<td>" + feature.properties.Descripcio + "</td>" +
+                    "<td><a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a></td>" +
+                "</tr>" +
+            "</table>" +
+        "</div>";
+    }
+    layer.bindPopup(PopupContent);
+}
+*/
 
     // Layer My_Interest_Zones
 var My_Interest_Ptos = L.geoJson(My_Interest_Ptos, {
