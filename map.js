@@ -54,7 +54,7 @@ controlLayers.addBaseLayer(PNOA, 'Ortofoto PNOA');
 
 // My_Interest_Zones
 
-// Style Function
+    // Style Function
 function stylePolygon(feature) {
     return {
         weight: 1.3, // grosor de línea
@@ -65,7 +65,7 @@ function stylePolygon(feature) {
     };
 };
 
-// Layer My_Interest_Zones
+    // Layer My_Interest_Zones
 
 var My_Interest_Zones = L.geoJson(My_Interest_Zones, {
 
@@ -74,9 +74,10 @@ var My_Interest_Zones = L.geoJson(My_Interest_Zones, {
 }).addTo(map);
 controlLayers.addOverlay(My_Interest_Zones, "Zonas de Interes")
 
+
 // My_Interest_Ptos
 
-// Style Function
+    // Style Function
 function stylePoint(feature) {
     return {
         color: "green"
@@ -84,20 +85,20 @@ function stylePoint(feature) {
     };
 };
 
-// My Point Icon Variable
+    // Icon Variables
 
 var myIcon1 = L.icon({
-    iconUrl: './images/Style/marker-icon1.png',
+    iconUrl: './images/style/marker-icon1.png',
     iconSize: [18, 18]
 });
 
 var myIcon2 = L.icon({
-    iconUrl: './images/Style/marker-icon2.png',
+    iconUrl: './images/style/marker-icon2.png',
     iconSize: [18, 18]
 });
 
 
-// PointToLayer Conditional Symbol Function
+    // PointToLayer Conditional Symbol Function
 
 function PointToLayer (feature, latlng) {
     var Type = feature.properties.Tipo
@@ -118,38 +119,43 @@ function PointToLayer (feature, latlng) {
         });
 };
 
-//Alternative CircleMarker
-/*
-function PointToLayer (feature, latlng) {
-    return new L.CircleMarker(latlng, {
-        color: "blue",
-        fillColor: "blue",
-        radius: 10, 
-        fillOpacity: 0.85,
-        weight: 2,
-        opacity: 1,
-        
-    });
-};
-*/
-
-// Popup Function
+    // Popup Function Table
 function PopupInfo (feature, layer) {
-   
+    if (feature.properties && feature.properties.ID) {
     var PopupContent = 
-        "<div class = 'ventana'>" + 
-                "ID: " + feature.properties.ID +
-                "<br/>" + "Tipo: " + feature.properties.Tipo +
-                "<br/>" + "Subtipo: " + feature.properties.Subtipo +
-                "<br>" + "Nombre: " + feature.properties.Nombre +
-                "<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" +
-                "<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
-
-    
+        "<div class = 'tabla'>" +
+            "<table>" +
+                "<thead>" +
+                "<tr>" +
+                    "<th>name" + feature.properties.ID + "</th>" +
+                    "<th>height</th>" +
+                    "<th>place</th>" +
+                "</tr>" +
+            "</table>" +
+        "</div>";
+    }
     layer.bindPopup(PopupContent);
 }
 
-// Layer My_Interest_Zones
+
+    /* Poup Function Leaflet Default
+    function PopupInfo (feature, layer) {
+        if (feature.properties && feature.properties.ID) {
+        var PopupContent = 
+                "<div class = 'ventana'>" + 
+                        "ID: " + feature.properties.ID +
+                        "<br/>" + "Tipo: " + feature.properties.Tipo +
+                        "<br/>" + "Subtipo: " + feature.properties.Subtipo +
+                        "<br>" + "Nombre: " + feature.properties.Nombre +
+                        "<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" +
+                        "<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
+    }
+        layer.bindPopup(PopupContent);
+    }
+    */
+
+
+    // Layer My_Interest_Zones
 var My_Interest_Ptos = L.geoJson(My_Interest_Ptos, {
 
     style: stylePoint,
@@ -158,6 +164,56 @@ var My_Interest_Ptos = L.geoJson(My_Interest_Ptos, {
 
 }).addTo(map);
 controlLayers.addOverlay(My_Interest_Ptos, 'Puntos de Interes');
+
+
+// Touristic Info Pto
+
+    //Popup Function
+function popUpInfoOficina(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.info) {
+        layer.bindPopup(feature.properties.info);
+    }
+}
+    // Icon Variable
+    var infoIcon = L.icon({
+        iconUrl: './images/style/info-icon.png',
+        iconSize: [18, 18]
+    });
+
+    // Style Function
+function estiloinfoIcon(feature, latlng) {
+	return L.marker(latlng, {
+		icon: infoIcon
+		//title: feature.properties.nombre
+	})
+};
+
+    // Layer Touristic Info Pto
+var geojsonInfoPto = {
+	"type": "Feature",
+	"properties": {
+        "info": "<b>Punto de Información Turístico de Benamahoma</b>" +
+        "<br>Calle Cuesta de la Venta, s/n." +
+        "11679, Benamahoma (Cádiz)</br>"+
+        "Telf.: 673300323<br>"+
+        "<a target='_blank' href='https://www.grazalema.es/departamentos-del-ayuntamiento/benamahoma/punto-de-informacion-turistica-de-benamahoma'>Visitar web</a></p>"
+		
+	},
+	"geometry": {
+		"type": "Point",
+		"coordinates": [-5.46942, 36.76564]
+	}
+};
+
+L.geoJson(geojsonInfoPto, {
+    onEachFeature: popUpInfoOficina,
+    pointToLayer: estiloinfoIcon
+}).addTo(map);
+
+
+
+
 
 
 
@@ -200,5 +256,46 @@ function polystyle(feature) {
     }).addTo(map);
 
 
+2. Modifing width of Popupcontent:
+
+function popUpInfoOficina(feature, layer) {
+    if (feature.properties && feature.properties.info) {
+        layer.bindPopup(L.popup({maxWidth:400}),feature.properties.info);
+    }
+}
+
+
+3. Insert html code in javascript 
+4. Insert html code in javascript variable
+
 */
 
+
+
+
+/* Code Security Copy
+
+var PopupContent = 
+        "<div class = 'ventana'>" + 
+                "ID: " + feature.properties.ID +
+                "<br/>" + "Tipo: " + feature.properties.Tipo +
+                "<br/>" + "Subtipo: " + feature.properties.Subtipo +
+                "<br>" + "Nombre: " + feature.properties.Nombre +
+                "<br>" + "IMG: " + "<br>" + "<a href='https://www.grazalema.es/'> <img src='./images/map/1.jpg' alt='Cabreriza'" +
+                "<br>" + "Link: " + "<br>" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'>Web Ayuntamiento Grazalema </a>"
+
+*/
+
+
+
+
+
+
+/* TASKS
+
+Añadir tabla 
+Añadir for para recorrer cambo de atributos y denominar las fotos
+Añadir boton descarga pdf
+Añadir barra superior mapa
+
+*/

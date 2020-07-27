@@ -1,4 +1,6 @@
-html,
+/* Style mapa, body, img */
+
+html,           
 body,
 img,
 #mapa {
@@ -8,8 +10,24 @@ img,
     margin: 0;
 }
 
+/* Variable Style Ventana  */
+
 .ventana {
     color: blue;
     background-color: red;
     
 }
+
+.leaflet-popup-content {
+
+    width: 300px  /* Default = auto */
+
+}
+
+.tabla {
+    width:100%;
+    border: 1px solid black
+
+}
+
+
