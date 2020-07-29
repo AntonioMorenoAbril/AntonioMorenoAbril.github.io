@@ -19,18 +19,41 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 
         <!-- Project Style -->
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 
         <!-- Layers -->
         <script src="./data/My_Interest_Zones.js"></script>
         <script src="./data/My_Interest_Ptos.js"></script>
 
-        <!-- Download Icon Library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+        <!-- Icon Font: Bootstrap 3 glyphicons-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     </head>
     <body>
+
+
+    <!--  Horizontal Icon Bar -->
+
+    <div class="icon-bar two-up" role="navigation">
+        <div class="council-icon" role="button" tabindex="0" aria-label="council-icon">
+            <a href="https://www.grazalema.es/"> <img src="./assets/img/style/council-icon.png"/></a>
+            <label></label>
+        </div>
+        <div id=txt>
+            <p style="color:white;font-size:15px;text-align:left">Visor Hiking our Patrimony</p>
+        </div>
+        <a class="icon" role="button" tabindex="0" aria-label="Menu">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+            <label>Menu</label>
+        </a>
+        <a class="icon" role="button" tabindex="0" aria-label="Info">
+            <i class="glyphicon glyphicon-info-sign"></i>
+            <label>Info</label>
+        </a>
+        
+    </div>
+
 
         <!-- Creamos el elemento div que albergará el mapa-->
         <div id="mapa"></div>
@@ -45,8 +68,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
         <!-- Nuestro código Javascript -->
-        <script src="map.js"></script>
-        
+        <script src="./assets/js/map.js"></script>
+        <script src="./assets/js/baselayers.js"></script>
+        <script src="./assets/js/overlaylayers.js"></script>
     
         
     </body>
