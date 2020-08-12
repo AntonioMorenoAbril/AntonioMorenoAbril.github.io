@@ -13,15 +13,21 @@
         };
     };
     
-        // Layer My_Interest_Zones
-    
-    var My_Interest_Zones = L.geoJson(My_Interest_Zones, {
-    
-        style:stylePolygon
-    
-    }).addTo(map);
-    controlLayers.addOverlay(My_Interest_Zones, "Zonas de Interes")
-    
+    // Layer My_Interest_Zones: Cargar archivo .geojson
+
+var My_Interest_Zones = L.geoJson(null, {
+    style:stylePolygon
+});
+
+$.getJSON("./data/myinterestzones.geojson", function (data) {
+    My_Interest_Zones.addData(data);
+});
+
+My_Interest_Zones.addTo(map);
+
+controlLayers.addOverlay(My_Interest_Zones, "Zonas de Interes")
+
+
     
     // My_Interest_Ptos
     
@@ -67,46 +73,59 @@
             });
     };
     
-     //Poup Function Leaflet Default
-     function PopupInfo (feature, layer) {
-        if (feature.properties && feature.properties.ID) {
-        var PopupContent = 
-                "<div class = 'ventana'>" + 
-                        "ID: " + feature.properties.ID +
-                        "<br/>" + "Tipo: " + feature.properties.Tipo +
-                        "<br/>" + "Subtipo: " + feature.properties.Subtipo +
-                        "<br>" + "Nombre: " + feature.properties.Nombre +
-                        "<br>" + "IMG: " + 
-                            //Images Side by Side //
-                            "<div class='row'>" +
-                                "<div class='column'>" +
-                                    "<a href='https://www.grazalema.es/'> <img src='./assets/img/map/1.jpg' alt='Cabreriza' style='width:100%'>" +
-                                "</div>" +
-                            "<div class='row'>" +
-                                "<div class='column'>" +
-                                    "<img id='myImg' src='./assets/img/map/2.jpg' alt='Snow' style='width:100%'>" +
-                                "</div>" +
-                            "</div>" +
-                        "<br>" + "Web:" + "<a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'> Web Ayuntamiento Grazalema </a>" +
-                        "<br>" + "Pdf Content: " + "<a href='./assets/pdf/arboles_espiral.pdf' download> <button class='btn'><i class='fa fa-download'></i> Download</button> </a>" 
-                           
-        }                   
-        layer.bindPopup(PopupContent);
+
+//Poup Function Leaflet Default
+function PopupInfo (feature, layer) {
+    if (feature.properties && feature.properties.ID) {
+
+    var PopupContent =  
+    `<div class= 'window'>
+
+            <header> 
+                <h1 <span class='header'>INFORMACIÓN: </h1>
+            </header>
+                
+            <div class='text1'> 
+                <p> <b> Tipo: </b> ${feature.properties.Tipo} </p>
+                <p> <b> Subtipo: </b> ${feature.properties.Subtipo} </p>
+                <p> <b> Nombre: </b> ${feature.properties.Nombre} </p>
+                <p> <b> Descripción: </b> ${feature.properties.Descripcio} </p>
+            </div>
+            <!--Images Side by Side -->
+            <div class='row'>
+                <div class='column'>
+                    <a href='https://www.grazalema.es/'> <img src='./assets/img/map/1.jpg' alt='Cabreriza' style='width:100%'>
+                </div>
+                <div class='column'>
+                    <img id='myImg' src='./assets/img/map/2.jpg' alt='Snow' style='width:100%'>
+                </div>
+            </div>
+                <p> Web: <a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'> Web Ayuntamiento Grazalema <p>
+                <p> Pdf Content: <a href='./assets/pdf/arboles_espiral.pdf' download> <button class='btn'><i class='fa fa-download'></i> Download</button> <p>
+    </div>
+    `  
+    }                   
+    layer.bindPopup(PopupContent);
     }
+
     
-       
+    // Layer My_Interest_Ptos: Cargar archivo .geojson 
     
-        // Layer My_Interest_Zones
-    var My_Interest_Ptos = L.geoJson(My_Interest_Ptos, {
-    
+    var My_Interest_Ptos = L.geoJson(null, {
         style: stylePoint,
         pointToLayer: PointToLayer,
         onEachFeature: PopupInfo
+    });
     
-    }).addTo(map);
-    controlLayers.addOverlay(My_Interest_Ptos, 'Puntos de Interes');
+    $.getJSON("./data/myinterestptos.geojson", function (data) {
+        My_Interest_Ptos.addData(data);
+    });
     
+    My_Interest_Ptos.addTo(map);
     
+    controlLayers.addOverlay(My_Interest_Ptos, "Puntos de Interes")
+    
+
     // Touristic Info Pto
     
         //Popup Function
@@ -154,8 +173,7 @@
     
     
     
-    
-    
+
     
     
     

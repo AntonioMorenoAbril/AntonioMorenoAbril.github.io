@@ -9,7 +9,7 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="theme-color" content="#FF0000">
-        <meta name="description" content="Visor web donde se recoge la red de senderos y puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y cultural) de la zona suroeste del término municipal de Grazalema-Benamahoma">
+        <meta name="description" content="Visor web donde se recoge la red de senderos y puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y cultural) del entorno del pueblo Benamahoma">
         <meta name="author" content="Antonio Jesús Moreno Abril">
 
         <!-- Añadimos título-->
@@ -21,17 +21,18 @@
         <!-- Project Style -->
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 
-        <!-- Layers -->
+        <!-- 
+        Layers 
         <script src="./data/My_Interest_Zones.js"></script>
         <script src="./data/My_Interest_Ptos.js"></script>
-
+        -->
 
         <!-- Icon Font: Bootstrap 3 glyphicons-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     
     </head>
-    <body>
 
+    <body>
 
     <!--  Horizontal Icon Bar -->
 
@@ -57,6 +58,9 @@
 
         <!-- Creamos el elemento div que albergará el mapa-->
         <div id="mapa"></div>
+        
+        <!--Agrega jquery de la biblioteca Leaflet-Ajax-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <!-- Agrega la biblioteca JavaScript Leaflet -->
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
@@ -64,8 +68,7 @@
         <!--Agrega la bliblioteca Leaflet-Ajax-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
         
-        <!--Agrega jquery de la biblioteca Leaflet-Ajax-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
         
         <!-- Nuestro código Javascript -->
         <script src="./assets/js/map.js"></script>

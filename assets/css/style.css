@@ -10,31 +10,79 @@ img,
     margin: 0;
 }
 
-/* Ventana  */
+/* POPUP */
 
-.ventana {
-    color: blue;
+/* Ventana */
+
+.window {
+    color:black;
     background-color: white;
-    
-}
-
-/* Popup content leflet */
-
-.leaflet-popup-content {
-
-    width: auto; /* Default = auto */
+    line-height: 10px; 
+    width: auto; 
     height: auto;
+    border: none; 
+    padding-bottom: 10px;
+    padding-top: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-/* Tabla */
+.header {
+  font-family: Impact;
+  font-size:15px;
+  font-style:normal; 
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  color:black; 
+  line-height: 2;
+  letter-spacing: 1.5px;
+  
+}
 
-.tabla {
+.text1 {
+  font-family: Calibri;
+  font-size:15px;
+  font-style:normal; 
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  line-height: 0.1;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color:black; 
+  
+  
+}
+
+.text2 {
+  font-family: Impact, Arial, sans-serif;
+  font-size:20px;
+  font-style:normal, italic, oblique; 
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: 
+  1px 1px 1px red,
+  2px 2px 1px red;
+  text-align: left, right, center, justify;
+  line-height: 1.6;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  color:blue; 
+  
+}
+
+/* Table 
+
+.table {
     width:auto;
     height:auto;
     border: 1px solid black;
     background-color: lightblue;
     text-align: center;
 }
+
+*/
 
 /* Download Icon */
 
@@ -48,45 +96,6 @@ img,
   }
 
 
-  
- /* Icon Bar */
-
- .icon-bar {
-  background-color: #555;
-  height: 80px;
-  text-align: center;
-  font-size: 20px;
-  transition: all 0.3s ease; /* Add transition for hover effects */
-  padding: 10px 3% 10px;
-}
-
-.icon-bar a:hover {
-  background-color: #000; 
-
-}
-
-.icon {
-  float: middle;
-  size: 10%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.council-icon {
-  float: left;
-  display:inline;
-   padding-bottom: 10px;
-  /*padding-left: 10px;*/
-  padding-top: 1px;
-  padding-right: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 40px;
-  width: 90px;
-  
-}
-
-
   /* Images Side by Side */
 
   .column {
@@ -94,11 +103,11 @@ img,
     width: 33.33%;
     padding: 5px;
   }
-  
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+  .row {
+    float: center;
+    width: 100%;
+    padding: 10px;
   }
 
 
@@ -191,3 +200,40 @@ img,
     }
   }
 
+
+  /* ICON BAR */
+
+ .icon-bar {
+  background-color: #555;
+  height: 80px;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  padding: 10px 3% 10px;
+}
+
+.icon-bar a:hover {
+  background-color: #000; 
+
+}
+
+.icon {
+  float: middle;
+  size: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.council-icon {
+  float: left;
+  display:inline;
+   padding-bottom: 10px;
+  /*padding-left: 10px;*/
+  padding-top: 1px;
+  padding-right: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 40px;
+  width: 90px;
+  
+}
