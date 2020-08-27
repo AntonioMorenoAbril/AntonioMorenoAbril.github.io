@@ -4,7 +4,8 @@
 var OCM3 = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=8f3fd4826f1641e9a2cead3ef443e05d', {
     attribution: '&copy; OpenCycleMap_3',
     opacity: 1,
-    minZoom: 12,
+    //minZoom: 12,
+    minZoom:1,
     maxZoom: 28,
     minNativeZoom: 0,
     maxNativeZoom: 18,

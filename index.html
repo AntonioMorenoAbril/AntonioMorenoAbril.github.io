@@ -1,80 +1,127 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-    <head>
 
-        <!--Añadimos metadatos-->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="theme-color" content="#FF0000">
-        <meta name="description" content="Visor web donde se recoge la red de senderos y puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y cultural) del entorno del pueblo Benamahoma">
-        <meta name="author" content="Antonio Jesús Moreno Abril">
+<head>
 
-        <!-- Añadimos título-->
-        <title>Visor Hiking Our Patrimony</title>
-        
-        <!-- Hojas de estilos externas CSS Leaflet -->
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <!--Añadimos metadatos-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#FF0000">
+    <meta name="description"
+        content="Visor web donde se recoge la red de senderos y puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y cultural) del entorno del pueblo Benamahoma">
+    <meta name="author" content="Antonio Jesús Moreno Abril">
 
-        <!-- Project Style -->
-        <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+    <!-- Añadimos título-->
+    <title>Visor Hiking Our Patrimony</title>
 
-        <!-- 
+    <!-- Hojas de estilos externas CSS Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <!-- Project Style -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+    <!-- 
         Layers 
         <script src="./data/My_Interest_Zones.js"></script>
         <script src="./data/My_Interest_Ptos.js"></script>
         -->
 
-        <!-- Icon Font: Bootstrap 3 glyphicons-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    </head>
+    <!-- Horizontal Bar -->
+    <!-- Icon Font: Bootstrap 3 glyphicons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <body>
+    <!-- LeafletOpenLayer Plugin Style -->
+    <link rel="stylesheet" href="./assets/plugins/Leaflet.FileLayer-master/docs/style.css" />
+
+    <!-- Leafletmarkercluster Plugin Style -->
+    <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.Default.css" />
+    
+
+    <!-- MousePosition Plugin Style -->
+    <link rel="stylesheet" href="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.css" />
+
+</head>
+
+<body>
 
     <!--  Horizontal Icon Bar -->
 
     <div class="icon-bar two-up" role="navigation">
         <div class="council-icon" role="button" tabindex="0" aria-label="council-icon">
-            <a href="https://www.grazalema.es/"> <img src="./assets/img/style/council-icon.png"/></a>
+            <a href="https://www.grazalema.es/"> <img src="./assets/img/icon/council-icon.png" /></a>
             <label></label>
         </div>
-        <div id=txt>
-            <p style="color:white;font-size:15px;text-align:left">Visor Hiking our Patrimony</p>
+        <div class="txt3" id=txt>
+            <p>Visor Hiking Benamahoma</p>
         </div>
-        <a class="icon" role="button" tabindex="0" aria-label="Menu">
-            <i class="glyphicon glyphicon-menu-hamburger"></i>
-            <label>Menu</label>
-        </a>
+
         <a class="icon" role="button" tabindex="0" aria-label="Info">
             <i class="glyphicon glyphicon-info-sign"></i>
             <label>Info</label>
         </a>
-        
+
+        <a class="icon" role="button" tabindex="0" aria-label="Menu">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+            <label>Menu</label>
+        </a>
+
     </div>
 
 
-        <!-- Creamos el elemento div que albergará el mapa-->
-        <div id="mapa"></div>
-        
-        <!--Agrega jquery de la biblioteca Leaflet-Ajax-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Creamos el elemento div que albergará el mapa-->
+    <div id="mapa"></div>
 
-        <!-- Agrega la biblioteca JavaScript Leaflet -->
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-        
-        <!--Agrega la bliblioteca Leaflet-Ajax-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
-        
-        
-        
-        <!-- Nuestro código Javascript -->
-        <script src="./assets/js/map.js"></script>
-        <script src="./assets/js/baselayers.js"></script>
-        <script src="./assets/js/overlaylayers.js"></script>
+    <!--Agrega jquery de la biblioteca Leaflet-Ajax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Agrega la biblioteca JavaScript Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <!--Agrega la bliblioteca Leaflet-Ajax-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!-- Plugin LeafletOpenLayer -->
+    <script src="https://unpkg.com/togeojson@0.14.2"></script>
+    <script src="./assets/plugins/Leaflet.FileLayer-master/src/leaflet.filelayer.js"></script>
+
+
+    <!-- Plugin Leafletmarkercluster -->
+    <script src="./assets/plugins/Leaflet.markercluster-1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <!-- Plugin MousePosition -->
+    <script src="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close1">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content1" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+
+    </div>
+
+    <!-- Nuestro código Javascript -->
+    <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/baselayers.js"></script>
+    <script src="./assets/js/overlaylayers.js"></script>
     
-        
-    </body>
+    
+    
+    
+    
+
+
+
+
+</body>
+
 </html>
