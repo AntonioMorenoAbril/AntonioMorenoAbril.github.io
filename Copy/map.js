@@ -4,9 +4,9 @@
     // Map Variable
 var map = L.map('mapa', {
    center: [36.76, -5.46],
-    zoom: 11,
+    zoom: 13,
     zoomControl: false,
-    minZoom:14,
+    minZoom:1,
     
 });
 
@@ -30,25 +30,5 @@ var controlLayers = L.control.layers( null, null, {
     collapsed: false // false = open by default
   }).addTo(map);
 */
-
-//Horizontal Icon Bar
-
-    //infobtn
-    
-    var modal1 = document.getElementById('popup');
-    var btn = document.getElementById("infobtn");
-    var span = document.getElementsByClassName("close2")[0];
-    btn.onclick = function() {
-        modal1.style.display = "block";
-    }
-    span.onclick = function() {
-        modal1.style.display = "none";
-    }
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal1.style.display = "none";
-        }
-    }
-    
 
 

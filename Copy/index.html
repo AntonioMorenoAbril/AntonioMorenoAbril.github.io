@@ -29,8 +29,7 @@
         <script src="./data/My_Interest_Ptos.js"></script>
         -->
 
-
-    <!-- Glyphicons Horizontal Bar Icon: Bootstrap 3 -->
+    <!-- Horizontal Bar Icon Font: Bootstrap 3 glyphicons-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- LeafletGrouplayercontrol Plugin Style -->
@@ -42,6 +41,7 @@
     <!-- Leafletmarkercluster Plugin Style -->
     <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.Default.css" />
+
 
     <!-- MousePosition Plugin Style -->
     <link rel="stylesheet" href="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.css" />
@@ -128,57 +128,28 @@
 -->
 
 
-    
-  <!--  Horizontal Icon Bar -->
+    <!--  Horizontal Icon Bar -->
 
-  <div class="icon-bar1 two-up" role="navigation">
-    <div class="council-icon1" role="button" tabindex="0" aria-label="council-icon">
-        <a href="https://www.grazalema.es/" target= '_blank'> <img src="./assets/img/icon/council-icon.png" /></a>
-        <label></label>
-    </div>
-    <div class="txt2" id=txt>
-        <p>Visor Hiking Benamahoma</p>
-    </div>
-    
-    <button id="infobtn" class="buttom1">
-      <i class="glyphicon glyphicon-info-sign"></i>
-      Info</button>
-
-    <div id="popup" class="modal" style='width:700px; position:fixed; top:50px; right:50px; transform: translate(65%, 0%); overflow:auto; border-radius:none' >
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close2">&times;</span>
-          <h2 class="modal-title" style='font-weight:bold; text-align:center; font-size:25px' >Información</h2>
+    <div class="icon-bar two-up" role="navigation">
+        <div class="council-icon" role="button" tabindex="0" aria-label="council-icon">
+            <a href="https://www.grazalema.es/"> <img src="./assets/img/icon/council-icon.png" /></a>
+            <label></label>
         </div>
-            <div class="modal-body">
-                <p>El Ayuntamiento de Posadas, a través de sus Concejalías de Desarrollo y Turismo, pone en marcha este <b>Visor Web Turístico-Patrimonial</b>. Mediante esta aplicación se podrá acceder y consultar de una forma interactiva la información sobre los hitos más relevantes del municipio en su contexto patrimonial.</p>
-                <p>Al mapa general de los <b>27 puntos de interés patrimonial</b> se le suma la presentación de <b>tres rutas temáticas, “Arqueologica”, “Arquitectura civil-religiosa” y “Patrimonio Natural”</b>, que discurren tanto por el núcleo urbano como por el resto del territorio municipal. </p>
-                <p>Esta aplicación informática, que complementa otros medios informativos (folletos, señalización turística, etc.), pretende que el turista conozca el rico patrimonio de Posadas, permitiendo la preparación  previa de la visita por el mismo. Supone también un apoyo de contenido y localización durante la misma y una fuente para recuerdo de la experiencia tras su paso por nuestro pueblo. Por tanto, es un recurso de gran utilidad que proporciona de manera atractiva información para la visita a Posadas.</p>
-                <p>Este proyecto se enmarca dentro del <i>Plan Estratégico de Posadas y de la Agenda de Desarrollo Sostenible Municipal de Posadas</i> y está financiado por la Delegación Territorial de Cultura, Turismo y Deporte de la Junta de Andalucía (Orden de 4 de agosto de 2014, por la que se aprueban las bases reguladoras para la concesión de subvenciones en régimen de concurrencia competitiva en materia de turismo en la línea de infraestructuras turísticas para entidades locales, modalidad ITL (BOJA núm. 160 de 19/08/2014).</p>
-                <p>Para más información, póngase en contacto con:</p>
-                <p class="text-center">
-                    <b>Oficina de Turismo de Posadas</b><br>
-                    Plaza de los Pósitos, 3<br>
-                    14730 Posadas (Córdoba) – Spain<br>
-                    Telf.: (+34) 957 630 378
-                </p>
-            </div>
-            <div class="modal-footer" style='font-weight:bold; text-align:left; font-size:10px'>
-              <h2>Autor: Antonio Jesús Moreno Abril</h2>
-            </div>
-      </div>
+        <div class="txt3" id=txt>
+            <p>Visor Hiking Benamahoma</p>
+        </div>
+
+        <a class="icon" role="button" tabindex="0" aria-label="Info">
+            <i class="glyphicon glyphicon-info-sign"></i>
+            <label>Info</label>
+        </a>
+
+        <a class="icon" role="button" tabindex="0" aria-label="Menu">
+            <i class="glyphicon glyphicon-menu-hamburger"></i>
+            <label>Menu</label>
+        </a>
+
     </div>
-
-   <!-- <button id="infobtn" class="buttom1"
-      <a class="icon1" role="button" tabindex="0" aria-label="Menu">
-          <i class="glyphicon glyphicon-menu-hamburger"></i>
-          <label style='margin:5px'>Menu</label>
-      </a>
-    </buttom>
-  --->
-
-  </div>
-
 
 
     <!-- Creamos el elemento div que albergará el mapa-->
@@ -207,7 +178,7 @@
     <script src="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
 
     <!-- The Modal -->
-    <div id="myModal" class="modal1">
+    <div id="myModal" class="modal">
 
         <!-- The Close Button -->
         <span class="close1">&times;</span>

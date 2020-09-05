@@ -1,0 +1,296 @@
+/* Mapa, body, img */
+
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#mapa {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ 
+
+#mapa {
+
+  z-index: 0; /* Sit on top */
+}
+
+
+
+
+/* POPUP */
+
+/* Ventana */
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+.window {
+  color: black;
+  background-color: white;
+  line-height: 10px;
+  width: auto;
+  height: auto;
+  border: none;
+  padding-bottom: 10px;
+  padding-top: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header {
+  font-family: Impact;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  color: black;
+  background: white;
+  letter-spacing: 1.5px;
+
+}
+
+.text1 {
+  font-family: Calibri;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: black;
+
+
+}
+
+.text2 {
+  font-family: Impact, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal, italic, oblique;
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow:
+    1px 1px 1px red,
+    2px 2px 1px red;
+  text-align: left, right, center, justify;
+  line-height: 1.6;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  color:white;
+
+}
+
+/* Table 
+
+.table {
+    width:auto;
+    height:auto;
+    border: 1px solid black;
+    background-color: lightblue;
+    text-align: center;
+}
+
+*/
+
+/* Download Icon */
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 2px 2px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+
+/* Images Side by Side */
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row {
+  float: center;
+  width: 100%;
+  padding: 10px;
+}
+
+
+
+/* Image Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  max-width: 100%;
+  width: 800px;
+  /* Tamaño del modal */
+  height: 600px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  transform: translate(350px, 80px);
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content1 {
+  margin:auto;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-width: 100%;
+  background-color: black;
+  border-radius: none;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color:white;
+  padding: 10px 0;
+  /*height: 150px;*/
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* The Close Button */
+.close1 {
+  position: fixed;
+  top: 1px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close1:hover,
+.close1:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content1 {
+    width: 100%;
+  }
+}
+
+/* ICON BAR */
+
+.icon-bar {
+  background-color: #555;
+  height: 70px;
+
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon1 {
+  size: 10%;
+  float: right;
+  padding-top: 25px;
+  padding-right: 50px;
+
+}
+
+.council-icon {
+  float: left;
+  display: inline;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 60px;
+  width: 160px;
+  margin-top: 7px;
+}
+
+.txt3 {
+  color: white;
+  font-family: arial;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 25px;
+  float: left;
+  padding-left: 10px;
+}
+
+/* Plugin Load Layer */
+
+.icon2 {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 4px;
+}
