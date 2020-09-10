@@ -3,7 +3,7 @@
 // Layer OpenCycleMap_3 
 var OCM3 = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=8f3fd4826f1641e9a2cead3ef443e05d', {
     attribution: '&copy; OpenCycleMap_3',
-    opacity: 1,
+    opacity: 0.7,
     //minZoom: 12,
     minZoom:1,
     maxZoom: 28,
@@ -23,5 +23,15 @@ var PNOA = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
 });
 //controlLayers.addBaseLayer(PNOA, 'Ortofoto PNOA');
 
+/* // Layer LIDAR 
+var LIDAR = L.tileLayer.wms('https://wmts-mapa-lidar.idee.es/lidar', {
+    layers: "EL.GridCoverageDSM",
+    attribution: '&copy; Modelo Digital de Superficies LiDAR',
+    matrixSet: 'EPSG:3857',
+    format: 'image/png',
+    title: "Modelo Digital de Superficies LiDAR",
+    opacity: 1.0
+}).addTo(map);
+//controlLayers.addBaseLayer(LIDAR, 'LIDAR IDEE'); */
 
 

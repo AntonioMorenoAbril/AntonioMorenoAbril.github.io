@@ -1,5 +1,184 @@
 // OVERLAYS LAYERS
 
+
+// Area de Trabajo
+
+// Style Function
+function stylePolygon1(feature) {
+    return {
+        weight: 3, // grosor de línea
+        color:  'rgb(103, 107, 105)', // color de línea
+        opacity: 1, // tansparencia de línea
+        dashArray: '50,40',
+        fillColor: 'yellow', // color de relleno
+        fillOpacity: 0 // transparencia de relleno
+    };
+};
+
+// Layer Area de Trabajo: Cargar archivo .geojson
+
+var AreaProyecto = L.geoJson(null, {
+    style: stylePolygon1
+});
+
+$.getJSON("./data/AreaProyecto.geojson", function (data) {
+    AreaProyecto.addData(data);
+});
+
+AreaProyecto.addTo(map);
+
+// Limites Municipios
+
+// Style Function
+function styleLine1(feature) {
+    return {
+        weight: 2, // grosor de línea
+        color:  'rgb(224, 30, 20)', // color de línea
+        opacity: 1, // tansparencia de línea
+        //dashArray: '1,10',
+        fillColor: 'yellow', // color de relleno
+        fillOpacity: 0 // transparencia de relleno
+    };
+};
+
+// Layer Limites Municipios: Cargar archivo .geojson
+
+var LimitesMunicipios = L.geoJson(null, {
+    style: styleLine1
+});
+
+$.getJSON("./data/LimitesMunicipales.geojson", function (data) {
+    LimitesMunicipios.addData(data);
+});
+
+LimitesMunicipios.addTo(map);
+
+// Limites Parque Natural
+
+// Style Function
+function stylePolygon2(feature) {
+    return {
+        weight: 2, // grosor de línea
+        color:  'rgb(224, 137, 22)', // color de línea
+        opacity: 1, // tansparencia de línea
+        dashArray: '20,10',
+        fillColor: 'yellow', // color de relleno
+        fillOpacity: 0 // transparencia de relleno
+    };
+};
+
+// Layer Limites Parque Natural: Cargar archivo .geojson
+
+var LimitesParque = L.geoJson(null, {
+    style: stylePolygon2
+});
+
+$.getJSON("./data/LimitesParqueNatural.geojson", function (data) {
+    LimitesParque.addData(data);
+});
+
+LimitesParque.addTo(map);
+
+
+// Monte Público
+
+// Style Function
+function stylePolygon3(feature) {
+    return {
+        weight: 1, // grosor de línea
+        color: 'rgb(4, 56, 20)', // color de línea
+        opacity: 0.5, // tansparencia de línea
+        fillColor: 'rgb(4, 56, 20)', // color de relleno
+        fillOpacity: 0.5 // transparencia de relleno
+    };
+};
+
+// Layer Monte Público: Cargar archivo .geojson
+
+var MontePublico = L.geoJson(null, {
+    style: stylePolygon3
+});
+
+$.getJSON("./data/MontePublico.geojson", function (data) {
+    MontePublico.addData(data);
+});
+
+MontePublico.addTo(map);
+
+// Parcelas Catastro
+
+// Style Function
+function stylePolygon4(feature) {
+    return {
+        weight: 1, // grosor de línea
+        color: 'rgb(242, 111, 104)', // color de línea
+        opacity: 0.7, // tansparencia de línea
+        fillColor: 'rgb(232, 137, 132)', // color de relleno
+        fillOpacity: 0.5 // transparencia de relleno
+    };
+};
+
+// Layer Parcelas Catastro: Cargar archivo .geojson
+
+var ParcelasCatastro = L.geoJson(null, {
+    style: stylePolygon4
+});
+
+$.getJSON("./data/ParcelasCatastro.geojson", function (data) {
+    ParcelasCatastro.addData(data);
+});
+
+ParcelasCatastro.addTo(map);
+
+// Rios
+
+// Style Function
+function styleLine2(feature) {
+    return {
+        weight: 2, // grosor de línea
+        color:  'rgb(20, 102, 224)', // color de línea
+        opacity: 0.4, // tansparencia de línea
+        //dashArray: '20,10',
+    };
+};
+
+// Layer Rios: Cargar archivo .geojson
+
+var Rios = L.geoJson(null, {
+    style: styleLine2
+});
+
+$.getJSON("./data/Rios.geojson", function (data) {
+    Rios.addData(data);
+});
+
+Rios.addTo(map);
+
+// Senderos Actuales
+
+// Style Function
+function styleLine3(feature) {
+    return {
+        weight: 1.5, // grosor de línea
+        color:  'rgb(159, 21, 194)', // color de línea
+        opacity: 1, // tansparencia de línea
+        //dashArray: '20,10',
+    };
+};
+
+// Layer Senderos Actuales: Cargar archivo .geojson
+
+var SenderosActuales = L.geoJson(null, {
+    style: styleLine3
+});
+
+$.getJSON("./data/SenderosActuales.geojson", function (data) {
+    SenderosActuales.addData(data);
+});
+
+SenderosActuales.addTo(map);
+
+
 // My_Interest_Zones
 
 // Style Function
@@ -115,29 +294,53 @@ function PointToLayer(feature, latlng) {
 
 
 //Poup Function Leaflet Default
-function PopupInfo(feature, layer) {
+
+// List image function: Create div column for each image 
+function ListImg (idfoto) {
+    var HtmlImg =""
+    var IdPhoto = idfoto
+    var IdPhotoList = IdPhoto.split(',')
+
+    IdPhotoList.forEach((foto) => {
+        
+       HtmlImg += `<div class='column1'>
+        <img id='myImg1' src='./assets/img/map/Merge/${foto}.jpg' alt='${foto}' style='width:100%' onclick = "myFunction1(${foto})">
+       </div>` 
+    
+    })
+    console.log(HtmlImg)
+    return HtmlImg 
+ 
+} 
+
+// Popup function
+function PopupInfo (feature,layer) {
     if (feature.properties && feature.properties.ID) {
 
-        var PopupContent =
-            `<div class= 'window1'>
-
+        var PopupContent =   
+            //Images Side by Side//
+            `<div class='window1'>
             <header class='header1'> INFORMACIÓN: </header>
-                
-            <div class='text1'> 
-                <p> <b> Tipo: </b> ${feature.properties.Tipo} </p>
-                <p> <b> Subtipo: </b> ${feature.properties.Subtipo} </p>
-                <p> <b> Nombre: </b> ${feature.properties.Nombre} </p>
-                <p> <b> Descripción: </b> ${feature.properties.Descripcio} </p>
-                
-            </div>
+                    
+                <div class='text1'> 
+                    <p> <b> ID: </b> ${feature.properties.ID} </p>
+                    <p> <b> Subtipo: </b> ${feature.properties.Subtipo} </p>
+                    <p> <b> Nombre: </b> ${feature.properties.Nombre} </p>
+                    <p> <b> Descripción: </b> ${feature.properties.Descripcio} </p>
+                    <p> <b> Tipo: </b> ${feature.properties.Tipo} </p>
+                    <p> <b> Subtipo: </b> ${feature.properties.Subtipo} </p>
+                    <p> <b> Nombre: </b> ${feature.properties.Nombre} </p>
+                    <p> <b> Descripción: </b> ${feature.properties.Descripcio} </p>
+                    <p> <b> Foto ID: </b> ${feature.properties.Foto_ID} </p>
+                    
+                </div>
             <!--Images Side by Side -->
             <div class='row1'>
                 <div class='column1'>
                     <a href='https://www.grazalema.es/'><img src='./assets/img/map/1.jpg' alt='Cabreriza' style='width:100%'></a> 
                 </div>
-                <div class='column1'>
-                    <img id='myImg1' src='./assets/img/map/2.jpg' alt='Snow' style='width:100%' onclick = "myFunction1()">
-                </div>
+                <!-- List the Img and Trigger the Modal -->
+                 ${ListImg(feature.properties.Foto_ID)}
             </div>
                 <p> Web: <a href='https://www.grazalema.es/' title= 'Web Ayto. Grazalema' target= '_blank'> Web Ayuntamiento Grazalema </a> </p>
                 <p> Pdf Content: <a href='./assets/pdf/arboles_espiral.pdf' download> <button class='btn1'><i class='fa fa-download'></i> Download</button> </p>
@@ -155,10 +358,10 @@ var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
-function myFunction1() {
+function myFunction1(foto) {
     modal.style.display = "block";
-    modalImg.src = "./assets/img/map/2.jpg";
-    captionText.innerHTML = "Arbol";
+    modalImg.src = `./assets/img/map/Merge/${foto}.jpg`;
+    captionText.innerHTML = `${foto}`;
 }
 
 // Get the <span> element that closes the modal
@@ -742,19 +945,29 @@ var basemaps = {
 };
 
 
-var patrimonio = {
+var overlaylayers = {
     "Puntos de interes": {
-        "<img src='assets/img/icon/marker-icon1.png' class='layercontrol1'>  Pto. Interés Paisajístico": My_Interest_Ptos_Natural,
+        "<img src='assets/img/icon/marker-icon1.png' class='layercontrol1'>  Pto. Interés Natural": My_Interest_Ptos_Natural,
         "<img src='assets/img/icon/marker-icon2.png' class='layercontrol1'>  Pto. Interés Paisajístico": My_Interest_Ptos_Paisajistico,
         "<img src='assets/img/icon/marker-icon3.png' class='layercontrol1'>  Pto. Interés Etnográfico": My_Interest_Ptos_Etnografico,
         "<img src='assets/img/icon/marker-icon4.png' class='layercontrol1'>  Pto. Interés Sendero": My_Interest_Ptos_Sendero,
         "<img src='assets/img/icon/marker-icon4.png' class='layercontrol1'>  Pto. Interés Sendero": markers1,
         "<img src='assets/img/icon/marker-icon5.png' class='layercontrol1'>  Pto. Interés Arqueológico": My_Interest_Ptos_Arqueologico,
         "<img src='assets/img/icon/marker-icon6.png' class='layercontrol1'>  Pto. Interés Infraestructura": My_Interest_Ptos_Infraestructura
+    },
+
+    "Capas Adicionales": {
+        "Área Proyecto": AreaProyecto,
+        "Límites Municipales": LimitesMunicipios,
+        "Límites Parque Natural": LimitesParque,
+        "Monte Público": MontePublico,
+        "Poblaciones": ParcelasCatastro,
+        "Ríos": Rios,
+        "Senderos Señalizados": SenderosActuales
     }
 };
 
-var controlCapas = L.control.groupedLayers(basemaps, patrimonio, {
+var controlCapas = L.control.groupedLayers(basemaps, overlaylayers, {
     position: "bottomright", // 'topleft', 'bottomleft', 'bottomright'
     collapsed: true // false = open by default
     }
