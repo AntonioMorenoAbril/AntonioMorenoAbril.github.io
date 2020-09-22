@@ -285,7 +285,7 @@ img {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: blue;
+    color: white;
     background-color: #555;
     border: 2px solid none;
     margin-top:11px;
@@ -293,7 +293,7 @@ img {
     float: right;
     width: 100px;
   }
-  .buttom1:hover {background-color: white}
+  .buttom1:hover {background-color: blue}
   .buttom1:active {
     transform: translateY(4px);
   }
@@ -333,6 +333,21 @@ img {
 
 }
 
+.layercontrol2 {
+  width: 50px; 
+  height: 5px; 
+  padding-bottom: 2px;
+  margin: 0;
+
+}
+
+.layercontrol3 {
+  width: 30px; 
+  height: 18px; 
+  padding-bottom: 5px;
+  margin: 0;
+
+}
 .mycluster {
   width: 40px;
   height: 40px;

@@ -3,10 +3,11 @@
 
     // Map Variable
 var map = L.map('mapa', {
-   center: [36.76, -5.46],
-    zoom: 11,
+   center: [36.7585, -5.4647],
+    zoom: 15,
     zoomControl: false,
     minZoom:12,
+    doubleClickZoom: false
     
 });
 
