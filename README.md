@@ -80,7 +80,7 @@ Gracias Antonio por ser como eres.
 
 ### Capturas de pantalla:
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture0.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/tree/version4/assets/img/readme/Capture0.png)
 
 ![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture1.png)
 
