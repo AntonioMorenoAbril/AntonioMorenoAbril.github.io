@@ -80,16 +80,16 @@ https://antoniomorenoabril.github.io/visorbenamahoma/
 
 ### Capturas de pantalla:
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version4/assets/img/readme/Capture0.png)
+![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version4/assets/img/readme/Capture0.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture1.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture1.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture2.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture2.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture3.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture3.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture4.png)
+![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture4.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture5.png)
+![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture5.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture6.png)
+![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture6.jpg)
