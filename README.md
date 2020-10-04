@@ -52,8 +52,10 @@ Con el visor web se quería ayudar a dinamizar, potenciar y contemplar en la reg
 
 ### Datos del autor:
 
-Nombre: Antonio Jesús Moreno Abril  
+Nombre: Antonio Jesús Moreno Abril
+
 Correo: antoniomorenoabril@gmail.com
+
 Instagram: geoseeking
 
 ### Agradecimientos:
@@ -70,29 +72,24 @@ Gracias Antonio por ser como eres.
 
 ### Demo:
 
-[URL] https://github.com/AntonioMorenoAbril/VisorBenamahoma.git
+(https://github.com/AntonioMorenoAbril/VisorBenamahoma.git)
 
 ### Repositorio web:
 
-[URL](https://antoniomorenoabril.github.io/visorbenamahoma/)
+(https://antoniomorenoabril.github.io/visorbenamahoma/)
 
 ### Capturas de pantalla:
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture0.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture0.png)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture1.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture1.png)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture2.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture2.png)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture3.png)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture3.png)
 
 ![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture4.png)
 
 ![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture5.png)
 
 ![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture6.png)
-
-
-![Desktop Search]()
-
-![Desktop Popup]()
