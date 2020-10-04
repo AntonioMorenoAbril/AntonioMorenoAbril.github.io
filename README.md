@@ -72,11 +72,11 @@ Gracias Antonio por ser como eres.
 
 ### Demo:
 
-https://github.com/AntonioMorenoAbril/visorbenamahoma.git
+https://antoniomorenoabril.github.io/visorbenamahoma/
 
 ### Repositorio web:
 
-https://antoniomorenoabril.github.io/visorbenamahoma/
+https://github.com/AntonioMorenoAbril/visorbenamahoma.git
 
 ### Capturas de pantalla:
 
