@@ -1,4 +1,4 @@
-Visor Web Turístico-Patrimonial de Benamahoma: "NATURALMENTEBENAMAHOMA"
+Visor Web de Benamahoma: "NATURALMENTEBENAMAHOMA"
 ======================================
 
 ### Acerca de Benamahoma:
@@ -66,7 +66,7 @@ Agradecer a Violeta y Luis por parte de la Asociación Geoinnova, gracias por vu
 
 Agradecer a Cristina y Paco por parte del Ayuntamiento de Grazalema, gracias por escuchar y apoyar mi propuesta.
 
-Gracias Anastasia por tu compañía, apoyo y amor.
+Gracias Anastasia por tu compañía, amor y luz.
 
 Gracias Antonio por ser como eres.
 
@@ -82,14 +82,14 @@ https://antoniomorenoabril.github.io/visorbenamahoma/
 
 ![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture0.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture1.jpg)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture1.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture2.jpg)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture2.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version1/images/readme/Capture3.jpg)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture3.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture4.jpg)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture4.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture5.jpg)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture5.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/VisorBenamahoma/blob/version1/images/readme/Capture6.jpg)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture6.JPG)
