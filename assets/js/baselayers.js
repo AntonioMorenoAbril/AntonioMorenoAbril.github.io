@@ -2,7 +2,8 @@
 
 // Layer OpenCycleMap_3 
 var OCM3 = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=8f3fd4826f1641e9a2cead3ef443e05d', {
-    attribution: '&copy; OpenCycleMap_3',
+    attribution: 'All maps &copy; ' +
+            '<a target=_blank href="http://www.opencyclemap.org/">OpenCycleMap</a>',
     opacity: 0.7,
     //minZoom: 12,
     minZoom:1,
@@ -17,7 +18,7 @@ var OCM3 = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?api
 var PNOA = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma', {
     layers: 'OI.OrthoimageCoverage', //nombre de la capa del servicio WMS (ver documento getCapabilities)
     format: 'image/jpeg',
-    attribution: '&copy; Instituto Geográfico Nacional de España',
+    attribution: '<a target=_blank href="http://www.ign.es/ign/main/index.do" target="_blank">© Instituto Geográfico Nacional de España</a>',
     opacity: 1,
     zIndex: 2
 });

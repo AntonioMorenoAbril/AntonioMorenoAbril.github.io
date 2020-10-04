@@ -13,14 +13,14 @@ var map = L.map('mapa', {
 
     // Customize link to view source code; add your own GitHub repository
 map.attributionControl
-.setPrefix('View <a href="https://github.com/AntonioMorenoAbril/VisorBenamahoma/tree/version1">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+.setPrefix('View <a target=_blank href="https://github.com/AntonioMorenoAbril/VisorBenamahoma/tree/version1">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
     // Reposition zoom control other than default topleft
-    L.control.zoom({position: "topright"}).addTo(map);
+    L.control.zoom({position: "topleft"}).addTo(map);
 
 // Scale
 L.control.scale({
-    imperial: false
+    imperial: false,
 }).addTo(map);
 
 

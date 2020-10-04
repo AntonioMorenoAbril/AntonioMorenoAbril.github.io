@@ -67,7 +67,7 @@ img {
   }
 
   .header1 {
-    font-family: Impact;
+    font-family: Calibri;
     font-size: 15px;
     font-style: normal;
     font-weight: bold;
@@ -75,7 +75,7 @@ img {
     text-decoration: underline;
     color: black;
     background: white;
-    line-height: 1;
+    line-height: 1.5;
     letter-spacing: 1.5px;
   }
 
@@ -115,7 +115,7 @@ img {
     color: white;
     padding: 2px 2px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 15 px;
   }
 
 
@@ -235,9 +235,35 @@ img {
 
 /* ICON BAR */
 
+
+.threeD {
+  color: darkgrey;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+    5px 13px 15px black;
+}
+
+.threeD:hover {
+  transition: 0.3s;
+  transform: scale(1.1)translate(-50%, -50%);
+  text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
+    1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
+    1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;
+}
+
+
 .icon-bar1 {
   background-color: #555;
-  height: 70px;
+  height: 65px;
 
 }
 
@@ -259,22 +285,68 @@ img {
   padding-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  height: 60px;
-  width: 160px;
+  height: 50px;
+  width: 140px;
   margin-top: 7px;
 }
 
 .txt2 {
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
   color: white;
-  font-family: arial;
-  font-size: 15px;
-  font-style: normal;
+  font-family: Arial ;
+  font-size: 25px;
+  font-style: italic;
   font-weight: bold;
   text-decoration: none;
-  padding-top: 25px;
+  padding-top: 12px;
   float: left;
   padding-left: 10px;
 }
+
+.txt3 {
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+  color:green;
+  font-family: Arial ;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 12px;
+  float: left;
+  padding-left: 10px;
+}
+
+.txt4 {
+  -webkit-text-stroke: 1px black;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+  color: rgb(252, 4, 4);
+  font-family: Arial;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 12px;
+  float: left;
+  padding-left: 1px;
+}
+
 
   /* infobtn */
   .buttom1 {
@@ -293,7 +365,7 @@ img {
     float: right;
     width: 100px;
   }
-  .buttom1:hover {background-color: blue}
+  .buttom1:hover {background-color: rgb(199, 8, 8)}
   .buttom1:active {
     transform: translateY(4px);
   }
