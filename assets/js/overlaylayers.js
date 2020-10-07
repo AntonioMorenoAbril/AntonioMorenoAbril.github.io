@@ -1512,7 +1512,7 @@ var overlaylayers = {
 
 var controlCapas = L.control.groupedLayers(basemaps, overlaylayers, {
     position: "bottomright", // 'topleft', 'bottomleft', 'bottomright'
-    collapsed: false, // false = open by default
+    collapsed: true, // false = open by default
     }
 
 );
