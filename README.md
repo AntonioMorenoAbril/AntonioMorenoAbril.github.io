@@ -84,11 +84,11 @@ https://github.com/AntonioMorenoAbril/visorbenamahoma.git
 
 ![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture1.JPG)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture2.JPG)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture2.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture3.JPG)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture3.jpg)
 
-![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture4.JPG)
+![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture4.jpg)
 
 ![Desktop](https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/version4/assets/img/readme/Capture5.JPG)
 
