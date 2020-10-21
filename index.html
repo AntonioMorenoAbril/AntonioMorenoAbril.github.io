@@ -3,55 +3,60 @@
 
 <head>
 
-    <!--Añadimos metadatos-->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#FF0000">
-    <meta name="description"
-        content="Visor web donde se recoge la red de senderos y puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y cultural) del entorno del pueblo Benamahoma">
-    <meta name="author" content="Antonio Jesús Moreno Abril">
+  <!--Añadimos metadatos-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FF0000">
+  <meta name="description"
+    content="Visor web donde se recoge la red de senderos y puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y cultural) del entorno del pueblo Benamahoma">
+  <meta name="author" content="Antonio Jesús Moreno Abril">
 
-    <!-- Añadimos título-->
-    <title>Visor Hiking Our Patrimony</title>
+  <!-- Añadimos título-->
+  <title>NaturalmenteBenamahoma</title>
 
-    <!-- Hojas de estilos externas CSS Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <!-- Hojas de estilos externas CSS Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
 
-    <!-- Project Style -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!-- Project Style -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 
-    <!-- 
+  <!-- 
         Layers 
         <script src="./data/My_Interest_Zones.js"></script>
         <script src="./data/My_Interest_Ptos.js"></script>
         -->
 
 
-    <!-- Glyphicons Horizontal Bar Icon: Bootstrap 3 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Glyphicons Horizontal Bar Icon: Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- LeafletGrouplayercontrol Plugin Style -->
-    <link rel="stylesheet" href="assets/plugins/Leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
+  <!-- Lateral Bar style-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- LeafletOpenLayer Plugin Style -->
-    <link rel="stylesheet" href="./assets/plugins/Leaflet.FileLayer-master/docs/style.css" />
+  <!-- LeafletGrouplayercontrol Plugin Style -->
+  <link rel="stylesheet" href="assets/plugins/Leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
 
-    <!-- Leafletmarkercluster Plugin Style -->
-    <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.Default.css" />
+  <!-- LeafletOpenLayer Plugin Style -->
+  <link rel="stylesheet" href="./assets/plugins/Leaflet.FileLayer-master/docs/style.css" />
 
-    <!-- MousePosition Plugin Style -->
-    <link rel="stylesheet" href="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.css" />
+  <!-- Leafletmarkercluster Plugin Style -->
+  <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="./assets/plugins/Leaflet.markercluster-1.4.1/dist/MarkerCluster.Default.css" />
+
+  <!-- MousePosition Plugin Style -->
+  <link rel="stylesheet" href="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.css" />
+
+
 
 </head>
 
 
 <body>
 
-    <!-- Group Layer Control Bootleaf
+  <!-- Group Layer Control Bootleaf
     <div class="leaflet-top leaflet-right">
         <div class="leaflet-control-layers leaflet-control" aria-haspopup="true" style="max-height: 612px;"><a
                 class="leaflet-control-layers-toggle" href="#" title="Layers"></a>
@@ -79,7 +84,7 @@
         </div>
     </div>
 -->
-    <!--  Group Layer Control VisorPosadas
+  <!--  Group Layer Control VisorPosadas
 
         
   <div class="leaflet-control-container">
@@ -127,133 +132,315 @@
   </div>
 -->
 
-<!-- Acceso Parque Natural Grazalema -->
-  <div class="leaflet-bottom leaflet-left">
-    <div class="infolegend leaflet-control"><a href="https://www.juntadeandalucia.es/medioambiente/servtc5/ventana/mostrarFicha.do?idEspacio=7411"
-        target="_blank" title="Parque Natural Sierra de Grazalema. Junta de Andalucía"><img id="imglogo"
-          alt="Web Consejería" src="assets/img/icon/ParqueNatural.jpg" style = 'border: 2px solid rgb(14, 13, 13); width:70px; height:70px; padding-left:0px; margin-bottom: 40px; border-radius:5px'></a></div>
-  </div>
-    
+
+
   <!--  Horizontal Icon Bar -->
 
   <div class="icon-bar1 two-up" role="navigation">
     <div class="council-icon1" role="button" tabindex="0" aria-label="council-icon">
-        <a href="https://www.grazalema.es/" target= '_blank'> <img src="./assets/img/icon/council-icon.png" /></a>
-        <label></label>
+      <a href="https://www.grazalema.es/" target='_blank'> <img src="./assets/img/icon/council-icon.png" /></a>
+      <label></label>
     </div>
     <div id=txt>
       <!--<span class = "txt2"> Visor Web </span>-->
-      
-      <span class = "txt2">Visor Web </span>
-      <span class = "txt3">NATURALMENTE</span>
-      <span class = "txt4">BENAMAHOMA</span>
+      <span class="txt2">Visor Web </span>
+      <span class="txt3">NATURALMENTE</span>
+      <span class="txt4">BENAMAHOMA</span>
       <!-- <span class = "txt5">: El Pueblo del naturalismo</span> -->
     </div>
 
-    
-    
+
+    <!--Button info-->
     <button id="infobtn" class="buttom1">
       <i class="glyphicon glyphicon-info-sign"></i>
       Info</button>
 
-    <div id="popup" class="modal" style='width:700px; position:fixed; top:50px; right:50px; transform: translate(65%, 0%); overflow:auto; border-radius:none' >
+    <div id="popup" class="modal"
+      style='width:1050px; position:fixed; top:53px; right:50px; transform: translate(30%, 0%); overflow:auto; border-radius:none'>
       <div class="modal-content">
         <div class="modal-header">
           <span class="close2">&times;</span>
-          <h2 class="modal-title" style='font-weight:bold; text-align:center; font-size:25px' >Información</h2>
+          <h2 class="modal-title" style='font-weight:bold; text-align:center; font-size:25px'>Información</h2>
         </div>
-            <div class="modal-body">
-              <p> El visor web turístico-patrimonial "<b><span style= 'color: green; font-style:italic'>NATURALMENTE</span><span style= 'color:red; font-style:italic'>BENAMAHOMA</span></b>"
-                es el resultado de un <b>proyecto personal</b> con el que se pretende ayudar a <b>divulgar la riqueza en senderos y patrimonio, así como la belleza y el poder sanador, del entorno natural
-                de Benamahoma</b>. </p>
+        <div class="modal-body">
+          <p> El visor web turístico-patrimonial "<b><span
+                style='color: green; font-style:italic'>NATURALMENTE</span><span
+                style='color:red; font-style:italic'>BENAMAHOMA</span></b>"
+            es el resultado de un <b>proyecto personal</b> con el que se pretende ayudar a <b>divulgar la riqueza en
+              senderos y patrimonio, así como la belleza y el poder sanador, del entorno natural
+              de Benamahoma</b>. </p>
 
-              <p> El visor recoge la <b>red de senderos</b>, <b>puntos/zonas de interés patrimonial (natural, paisajístico, etnográfico y arqueológico)</b> e <b>infraestructuras</b> del pueblo de Benamahoma y del entorno natural que lo rodea 
-                y conecta con los pueblos colindantes (Grazalema, El Bosque, Zahara de la Sierra, Tavíznar y Ubrique).</p>
+          <p> El visor recoge la <b>red de senderos</b>, <b>puntos/zonas de interés patrimonial (natural, paisajístico,
+              etnográfico y arqueológico)</b> e <b>infraestructuras</b> del pueblo de Benamahoma y del entorno natural
+            que lo rodea
+            y conecta con los pueblos colindantes (Grazalema, El Bosque, Zahara de la Sierra, Tavíznar y Ubrique).</p>
 
-              <p> A través de una red de rutas de senderismo que tienen como punto de partida el pueblo de Benamahoma, se anima al turista a visituar el conjunto de puntos y zonas de 
-                interés. Los senderos han sido divididos en dos tipos: <b>físicos (señalizados físicamente y ofertados por el Parque Natural)</b> y <b>virtuales (señalizados virtualmente y ofertados a través del visor)</b>. Adicionalmente, se han incluido una red de 
-                puntos de interés en relación con los senderos (vallas, trazo del sendero, puntos de referencia y bifurcaciones) que pueden ser de ayuda al visitante durante su recorrido.</p>
+          <p> A través de una red de rutas de senderismo que tienen como punto de partida el pueblo de Benamahoma, se
+            anima al turista a visituar el conjunto de puntos y zonas de
+            interés. Los senderos han sido divididos en dos tipos: <b>físicos (señalizados físicamente y ofertados por
+              el Parque Natural)</b> y <b>virtuales (señalizados virtualmente y ofertados a través del visor)</b>.
+            Adicionalmente, se han incluido una red de
+            puntos de interés en relación con los senderos (vallas, trazo del sendero, puntos de referencia y
+            bifurcaciones) que pueden ser de ayuda al visitante durante su recorrido.</p>
 
-              <p>El visor actual es una versión <b>preliminar</b>. Se pretende extender el proyecto al resto del término municipal de Grazalema. Se quiere mejorar y continuar la iniciativa añadiendo más senderos, lugares de interés e información, así como mejorar el estilo y funcionalidades
-                de la interfaz.</p>
-              
-              <p>Proyecto desarrollado dentro del marco de prácticas curriculares del <b>máster online TGIS ofertado por Geoinnova Formación</b> y en colaboración con el <b> Excmo. Ayuntamiento de Grazalema y el pueblo de Benamahoma</b>.</p>
-    
-              <p>Para más información sobre el visor consulte el siguiente enlace:</p>
- 
-              <p class="text-center">
-                <a target='_blank' href="https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/master/README.md"> Readme</a>
-              </p>
+          <p>El visor actual es una versión <b>preliminar</b>. Se pretende extender el proyecto al resto del término
+            municipal de Grazalema. Se quiere mejorar y continuar la iniciativa añadiendo más senderos, lugares de
+            interés e información, así como mejorar el estilo y funcionalidades
+            de la interfaz.</p>
 
-            </div>
+          <p>Proyecto desarrollado dentro del marco de prácticas curriculares del <b>máster online TGIS ofertado por
+              Geoinnova Formación</b> y en colaboración con el <b> Excmo. Ayuntamiento de Grazalema y el pueblo de
+              Benamahoma</b>.</p>
 
-            <div class="modal-footer" style='font-weight:normal; font-size:15px; text-align:center; font-style:italic'>
-              
-                <p>Autor: <b>Antonio Jesús Moreno Abril</b></p>
+          <p>Para más información sobre el visor consulte el siguiente enlace:</p>
 
-                <p>Email: <b>antoniomorenoabril@gmail.com</b></p>
+          <p class="text-center">
+            <a target='_blank' href="https://github.com/AntonioMorenoAbril/visorbenamahoma/blob/master/README.md">
+              <span
+                style='color:rgb(0, 110, 255); font-style:italic'>Readme</span></a>
+          </p>
 
-                <p>Instagram: <b>geoseeking</b></p>
-              
-            </div>
+        </div>
+
+        <div class="modal-footer" style='font-weight:normal; font-size:15px; text-align:center; font-style:italic'>
+
+          <p>Autor: <b>Antonio Jesús Moreno Abril</b></p>
+
+          <p>Email: <b>antoniomorenoabril@gmail.com</b></p>
+
+          <p>Instagram: <b>geoseeking</b></p>
+
+          <p>Linkedin: <a target='_blank' href="https://www.linkedin.com/in/antoniomorenoabril/"><span
+            style='color: rgb(0, 110, 255); font-style:italic'>Perfil</span></a></p>
+
+        </div>
       </div>
     </div>
 
-   <!-- <button id="infobtn" class="buttom1"
-      <a class="icon1" role="button" tabindex="0" aria-label="Menu">
-          <i class="glyphicon glyphicon-menu-hamburger"></i>
-          <label style='margin:5px'>Menu</label>
-      </a>
-    </buttom>
-  --->
+
+    <!-- Side Bar: Buttons Presentation-->
+
+    <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="width:185px;
+    height:400px; position:fixed; margin-top: 200px; display:none" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+
+      <!--Buttom Portada -->
+      <button id="infobtn1" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        Portada</button>
+
+      <div id="popup1" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close3">&times;</span>
+            <iframe src="./assets/presentation/Portada.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Indice -->
+      <button id="infobtn2" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        Índice</button>
+
+      <div id="popup2" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close4">&times;</span>
+            <iframe src="./assets/presentation/Indice.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+      
+      <!--Buttom Idea -->
+      <button id="infobtn3" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        1. Idea</button>
+
+      <div id="popup3" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close5">&times;</span>
+            <iframe src="./assets/presentation/OrigenIdea.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Objetivo -->
+      <button id="infobtn4" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        2. Objetivo</button>
+
+      <div id="popup4" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close6">&times;</span>
+            <iframe src="./assets/presentation/Objetivo&AreaTrabajo.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Beneficios -->
+      <button id="infobtn5" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        3. Beneficios</button>
+
+      <div id="popup5" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close7">&times;</span>
+            <iframe src="./assets/presentation/Beneficios&Alcance.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Limitaciones -->
+      <button id="infobtn6" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        4. Limitaciones</button>
+
+      <div id="popup6" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close8">&times;</span>
+            <iframe src="./assets/presentation/Limitaciones.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Sistemática -->
+      <button id="infobtn7" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        5. Sistemática</button>
+
+      <div id="popup7" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close9">&times;</span>
+            <iframe src="./assets/presentation/Sistematica.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Tecnologías -->
+      <button id="infobtn8" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        6. Tecnologías</button>
+
+      <div id="popup8" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close10">&times;</span>
+            <iframe src="./assets/presentation/Tecnologias.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+       <!--Buttom Visor -->
+       <button id="infobtn9" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        7. Visor</button>
+
+      <div id="popup9" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close11">&times;</span>
+            <iframe src="./assets/presentation/Visor.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Mejoras -->
+      <button id="infobtn10" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        8. Mejoras</button>
+
+      <div id="popup10" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close12">&times;</span>
+            <iframe src="./assets/presentation/Mejoras.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+      <!--Buttom Agradecimientos -->
+      <button id="infobtn11" class="w3-bar-item w3-button">
+        <i class="glyphicon glyphicon-triangle-right"></i>
+        9. ¡¡Gracias!!</button>
+
+      <div id="popup11" class="modal"
+        style='width:900px; height:695px; position:fixed; top:62px; right:50px; transform: translate(21%, 0%); overflow:auto; border-radius:none'>
+        <div class="modal-content">
+            <span class="close13">&times;</span>
+            <iframe src="./assets/presentation/Agradecimientos.pdf" width="100%" height="750px" frameborder='0'></iframe>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div>
+      <button id="infobtn1" class="buttom2" onclick="w3_open()">
+        <i class="glyphicon glyphicon-menu-hamburger"></i>
+        Presentación </button>
+    </div>
+
+      
 
   </div>
 
 
 
-    <!-- Creamos el elemento div que albergará el mapa-->
-    <div id="mapa"></div>
 
-    <!--Agrega jquery de la biblioteca Leaflet-Ajax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Agrega la biblioteca JavaScript Leaflet -->
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <!-- Creamos el elemento div que albergará el mapa-->
+  <div id="mapa">
 
-    <!--Agrega la bliblioteca Leaflet-Ajax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
-
-    <!-- Plugin LeafletGroupLayerControl -->
-    <script src="assets/plugins/Leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
-
-    <!-- Plugin LeafletOpenLayer -->
-    <script src="https://unpkg.com/togeojson@0.14.2"></script>
-    <script src="./assets/plugins/Leaflet.FileLayer-master/src/leaflet.filelayer.js"></script>
-
-    <!-- Plugin Leafletmarkercluster -->
-    <script src="./assets/plugins/Leaflet.markercluster-1.4.1/dist/leaflet.markercluster.js"></script>
-
-    <!-- Plugin MousePosition -->
-    <script src="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal1">
-
-        <!-- The Close Button -->
-        <span class="close1">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content1" id="img01">
-
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
-
+    <!-- Acceso Parque Natural Grazalema -->
+    <div class="leaflet-bottom leaflet-left">
+      <div class="infolegend leaflet-control"><a
+          href="https://www.juntadeandalucia.es/medioambiente/servtc5/ventana/mostrarFicha.do?idEspacio=7411"
+          target="_blank" title="Parque Natural Sierra de Grazalema. Junta de Andalucía"><img id="imglogo"
+            alt="Web Consejería" src="assets/img/icon/ParqueNatural.jpg"
+            style='border: 2px solid rgb(14, 13, 13); width:70px; height:70px; padding-left:0px; margin-bottom: 40px; border-radius:5px'></a>
+      </div>
     </div>
 
-    <!-- Nuestro código Javascript -->
-    <script src="./assets/js/map.js"></script>
-    <script src="./assets/js/baselayers.js"></script>
-    <script src="./assets/js/overlaylayers.js"></script>
+
+  </div>
+
+  <!--Agrega jquery de la biblioteca Leaflet-Ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Agrega la biblioteca JavaScript Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+  <!--Agrega la bliblioteca Leaflet-Ajax-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+  <!-- Plugin LeafletGroupLayerControl -->
+  <script src="assets/plugins/Leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
+
+  <!-- Plugin LeafletOpenLayer -->
+  <script src="https://unpkg.com/togeojson@0.14.2"></script>
+  <script src="./assets/plugins/Leaflet.FileLayer-master/src/leaflet.filelayer.js"></script>
+
+  <!-- Plugin Leafletmarkercluster -->
+  <script src="./assets/plugins/Leaflet.markercluster-1.4.1/dist/leaflet.markercluster.js"></script>
+
+  <!-- Plugin MousePosition -->
+  <script src="./assets/plugins/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal1">
+
+    <!-- The Close Button -->
+    <span class="close1">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content1" id="img01">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+
+  </div>
+
+  <!-- Nuestro código Javascript -->
+  <script src="./assets/js/map.js"></script>
+  <script src="./assets/js/baselayers.js"></script>
+  <script src="./assets/js/overlaylayers.js"></script>
 
 
 
