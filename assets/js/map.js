@@ -42,7 +42,7 @@ controlElevation.load("./data/Z_Track_1.geojson"); */
 
 // Customize link to view source code; add your own GitHub repository
 map.attributionControl.setPrefix(
-  'View <a target=_blank href="https://github.com/AntonioMorenoAbril/visorbenamahoma/">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
+  'View <a target=_blank href="https://github.com/AntonioMorenoAbril/visorbenamahoma">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>'
 );
 
 // Reposition zoom control other than default topleft
